@@ -1,99 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import  { useEffect } from 'react';
 //import './AboutPage.module.css';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-// Define or import the TeamMember component
-const TeamMember = ({ name, role, bio, quote, imgPlaceholder }: { name: string; role: string; bio: string; quote: string; imgPlaceholder: React.ReactNode }) => {
-  return (
-    <motion.div
-      style={{
-        backgroundColor: 'white',
-        padding: '24px',
-        borderRadius: '16px',
-        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '24px',
-        border: '2px solid black',
-        width: '100%',
-      }}
-    >
-      <div style={{ flexShrink: 0 }}>
-        <div style={{
-          width: '128px',
-          height: '128px',
-          borderRadius: '9999px',
-          backgroundColor: '#fef2f2',
-          overflow: 'hidden',
-          margin: '0 auto',
-          border: '2px solid #f87171'
-        }}>
-          {imgPlaceholder}
-        </div>
-      </div>
-      <div>
-        <h3 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '8px', color: 'black' }}>Team Member Name</h3>
-        <p style={{ color: '#f87171', fontWeight: '500', marginBottom: '12px' }}>{role}</p>
-        <p style={{ color: '#374151', marginBottom: '12px' }}>{bio}</p>
-        <p style={{ fontStyle: 'italic', color: '#4b5563' }}>"{quote}"</p>
-      </div>
-    </motion.div>
-  );
-return (
-    <motion.div
-      initial="hidden"
-      variants={{
-        visible: { opacity: 1, y: 0 },
-        hidden: { opacity: 0, y: 50 }
-      }}
-      transition={{ duration: 0.6 }}
-      style={{
-        backgroundColor: 'white',
-        padding: '24px',
-        borderRadius: '16px',
-        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '24px',
-        border: '2px solid black',
-        width: '100vw',
-      }}
-    >
-      <div style={{ flexShrink: 0 }}>
-        <div style={{
-          width: '128px',
-          height: '128px',
-          borderRadius: '9999px',
-          backgroundColor: '#fef2f2',
-          overflow: 'hidden',
-          margin: '0 auto',
-          border: '2px solid #f87171'
-        }}>
-          <div style={{
-            width: '100%',
-            height: '100%',
-            backgroundColor: '#e5e7eb',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: '#6b7280'
-          }}>
-            <span style={{ fontSize: '16px', color: '#6b7280' }}>Image Placeholder</span>
-          </div>
-        </div>
-      </div>
-      <div>
-        <h3 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '8px', color: 'black' }}>{name}</h3>
-        <p style={{ color: '#f87171', fontWeight: '500', marginBottom: '12px' }}>{role}</p>
-        <p style={{ color: '#374151', marginBottom: '12px' }}>{bio}</p>
-        <p style={{ fontStyle: 'italic', color: '#4b5563' }}>"{quote}"</p>
-      </div>
-    </motion.div>
-  );
-};
+// (Removed unused TeamMember component)
 
-const AboutPage = ({ quote }: { quote: string }) => {
+const AboutPage = () => {
   const controls = useAnimation();
   const { ref, inView } = useInView();
 
