@@ -86,10 +86,11 @@ const Navbar = () => {
               borderRadius: '9999px',
             }}
           />
-          <span style={{ fontSize: '1.2rem', fontWeight: 600, color: 'red', letterSpacing: '1px' }}>
+          
+        </Link>
+        <span style={{ fontSize: '1.2rem', fontWeight: 600, color: 'red', letterSpacing: '1px' }}>
             ZVA
           </span>
-        </Link>
 
         {/* Desktop Nav Links */}
         {!isMobile && (
